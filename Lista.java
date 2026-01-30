@@ -3,10 +3,7 @@ int size;
 Nodo cursore;
 Nodo primoRiferimento;
 
-
-
 //Getter&Setter
-
 public int getSize() {
     return size;
 }
@@ -15,7 +12,6 @@ public void setSize(int size) {
     this.size = size;
 }
 
-
 public Nodo getCursore() {
     return cursore;
 }
@@ -23,7 +19,6 @@ public Nodo getCursore() {
 public void setCursore(Nodo cursore) {
     this.cursore = cursore;
 }
-
 
 public Nodo getPrimoRiferimento() {
     return primoRiferimento;
@@ -179,5 +174,39 @@ public void inserimentoInMezzo(int indice, String valore){
     }
 
 }
+    public static void stampaLista(Lista lista) {
+        Nodo temp = lista.getPrimoRiferimento();
+        while (temp != null) {
+            System.out.print(temp.getValore() + " ");
+            temp = temp.getNext();
+        }
+        System.out.println();
+    }
+
+    public void aggiungiInOrdineAlfabetico(String valore) {
+        if (primoRiferimento == null) {
+            inserimentoInTesta(valore);
+            return;
+        }
+        
+        Nodo corrente = primoRiferimento;
+        int indice = 0;
+        
+            while (corrente != null &&
+                valore.compareToIgnoreCase(corrente.getValore()) > 0) {
+                corrente = corrente.getNext();
+                indice++;
+        }
+
+
+        
+        if (indice == 0) {
+            inserimentoInTesta(valore);
+        } else if (indice >= size) {
+            inserimentoInCoda(valore);
+        } else {
+            inserimentoInMezzo(indice, valore);
+        }
+    }
 
 }
