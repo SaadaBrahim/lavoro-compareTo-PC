@@ -24,19 +24,19 @@ public class Computer{
         this.ram = ram;
     }
 
-    public void toString(){
-        System.out.println("Marca: " + marca + ", Processore: " + processore + ", RAM: " + ram + "GB");
+    public String toString(){
+        return "Marca: " + marca + ", Processore: " + processore + ", RAM: " + ram + "GB";
     }
 
     public int compareTo(Computer altroComputer){
-        if (this.getRam < altroComputer.getRam()){
-            return -1
+        if (this.getRam() < altroComputer.getRam()){
+            return -1;
         }
-        else if (this.getRam > altroComputer.getRam()){
-            return 1
+        else if (this.getRam() > altroComputer.getRam()){
+            return 1;
         }
         else {
-            return 0
+            return 0;
         }
     }
 
@@ -48,6 +48,5 @@ public class Computer{
                 this.ram = ram;
         }
 
-    }
-    
 }
+    

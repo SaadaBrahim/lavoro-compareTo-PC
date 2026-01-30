@@ -6,9 +6,11 @@ public class Main {
     
     public static void main(String args[]){
         Lista lista = new Lista();
-        Computer pc1 = new Computer();
-        Computer pc2 = new Computer();
-        Computer pc3 = new Computer();
+        Computer pc1 = new Computer("msi", "intel i5", 8);
+        Computer pc2 = new Computer("hp", "intel i7", 16);
+        Computer pc3 = new Computer("mac", "M2", 32);
+        Computer pc4 = new Computer("dady", "intel i3", 4);
+        Computer pc5 = new Computer("zaka", "intel i3", 4);
 
 
         
@@ -20,26 +22,14 @@ public class Main {
         Lista.stampaLista(lista);
         
         // inserimento in testa
-        lista.inserimentoInTesta("Z");
+        lista.inserimentoInTesta("Z", pc4);
         System.out.print("inserimento in testa: ");
         Lista.stampaLista(lista);
         
         // inserimento in mezzo
-        lista.inserimentoInMezzo(2, "X");
+        lista.inserimentoInMezzo(2, "X", pc5);
         System.out.print("inserimento in mezzo: ");
         Lista.stampaLista(lista);
         
-        // aggiungi in ordine alfabetico
-        lista.aggiungiInOrdineAlfabetico("M");
-        System.out.print("aggiunta in ordine alfabetico M: ");
-        Lista.stampaLista(lista);
-        
-        lista.aggiungiInOrdineAlfabetico("D");
-        System.out.print("aggiunta in ordine alfabetico D: ");
-        Lista.stampaLista(lista);
-        
-        lista.aggiungiInOrdineAlfabetico("Y");
-        System.out.print("aggiunta in ordine alfabetico Y: ");
-        Lista.stampaLista(lista);
     }
 }

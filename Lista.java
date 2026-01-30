@@ -28,9 +28,9 @@ public void setPrimoRiferimento(Nodo primoRiferimento) {
     this.primoRiferimento = primoRiferimento;
 }
 
-    public void accoda(String valore){
+    public void accoda(String valore, Computer pc){
         Nodo cursor = raggiungiIndice(size-1);
-        aggiungiNodo(valore, cursor);
+        aggiungiNodo(valore, cursor, pc);
     }
 
 private void aggiungiNodo(String valore, Nodo posizione, Computer pc){
@@ -134,7 +134,7 @@ public void inserimento(int indice, String valore){
     size++;
 }
 
-public void inserimentoInTesta(String valore){
+public void inserimentoInTesta(String valore, Computer pc){
     Nodo nuovoNodo = new Nodo();
     nuovoNodo.setValore(valore);
         nuovoNodo.setComputer(pc);
@@ -161,7 +161,7 @@ public void inserimentoInCoda(String valore, Computer pc){
 
 }
 
-public void inserimentoInMezzo(int indice, String valore){
+public void inserimentoInMezzo(int indice, String valore, Computer pc){
     if (indice <= 0 || indice >= size) {
         System.out.println("indice non valido");
         return;
@@ -183,15 +183,15 @@ public void inserimentoInMezzo(int indice, String valore){
     public static void stampaLista(Lista lista) {
         Nodo temp = lista.getPrimoRiferimento();
         while (temp != null) {
-            System.out.print(temp.getValore() + " ");
+            System.out.print(temp.toString() + " ");
             temp = temp.getNext();
         }
         System.out.println();
     }
 
-    public void aggiungiInOrdineAlfabetico(String valore) {
+    public void aggiungiInOrdineAlfabetico(String valore, Computer pc) {
         if (primoRiferimento == null) {
-            inserimentoInTesta(valore);
+            inserimentoInTesta(valore, pc);
             return;
         }
         
@@ -207,16 +207,12 @@ public void inserimentoInMezzo(int indice, String valore){
 
         
         if (indice == 0) {
-            inserimentoInTesta(valore);
+            inserimentoInTesta(valore, pc);
         } else if (indice >= size) {
-            inserimentoInCoda(valore);
+            inserimentoInCoda(valore, pc);
         } else {
-            inserimentoInMezzo(indice, valore);
+            inserimentoInMezzo(indice, valore, pc);
         }
-    }
-
-    public int compareTo{
-        
     }
 
 }

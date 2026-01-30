@@ -1,8 +1,7 @@
 public class Nodo{
   private Computer computer;
   private String valore;
-  private
-Nodo next;
+  private Nodo next;
 
 //Getter&Setter
   public String getValore() {
@@ -26,7 +25,11 @@ Nodo next;
     }
 
     public Computer getComputer(){
-        return computer
+        return computer;
+    }
+
+    public String toString(){
+        return computer.toString() + "nome " + valore;
     }
 
 }
