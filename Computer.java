@@ -23,5 +23,31 @@ public class Computer{
     public void setRam(int ram) {
         this.ram = ram;
     }
+
+    public void toString(){
+        System.out.println("Marca: " + marca + ", Processore: " + processore + ", RAM: " + ram + "GB");
+    }
+
+    public int compareTo(Computer altroComputer){
+        if (this.getRam < altroComputer.getRam()){
+            return -1
+        }
+        else if (this.getRam > altroComputer.getRam()){
+            return 1
+        }
+        else {
+            return 0
+        }
+    }
+
+        //cost
+
+        public Computer(String marca, String processore, int ram){
+                this.marca = marca;
+                this.processore = processore;
+                this.ram = ram;
+        }
+
+    }
     
 }

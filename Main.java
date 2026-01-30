@@ -6,11 +6,16 @@ public class Main {
     
     public static void main(String args[]){
         Lista lista = new Lista();
+        Computer pc1 = new Computer();
+        Computer pc2 = new Computer();
+        Computer pc3 = new Computer();
+
+
         
         // inserimento in coda
-        lista.inserimentoInCoda("A");
-        lista.inserimentoInCoda("B");
-        lista.inserimentoInCoda("C");
+        lista.inserimentoInCoda("A", pc1 );
+        lista.inserimentoInCoda("B", pc2);
+        lista.inserimentoInCoda("C", pc3);
         System.out.print("inserimento in coda: ");
         Lista.stampaLista(lista);
         

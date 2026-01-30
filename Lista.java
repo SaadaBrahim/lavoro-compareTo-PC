@@ -33,9 +33,10 @@ public void setPrimoRiferimento(Nodo primoRiferimento) {
         aggiungiNodo(valore, cursor);
     }
 
-private void aggiungiNodo(String valore, Nodo posizione){
+private void aggiungiNodo(String valore, Nodo posizione, Computer pc){
     Nodo nuovoNodo = new Nodo();
     nuovoNodo.setValore(valore);
+    nuovoNodo.setComputer(pc);
     if (primoRiferimento == null) {
         primoRiferimento = nuovoNodo;
     } else if (posizione != null) {
@@ -136,14 +137,17 @@ public void inserimento(int indice, String valore){
 public void inserimentoInTesta(String valore){
     Nodo nuovoNodo = new Nodo();
     nuovoNodo.setValore(valore);
+        nuovoNodo.setComputer(pc);
+
     nuovoNodo.setNext(primoRiferimento);
     primoRiferimento = nuovoNodo;
     size++;
 }
 
-public void inserimentoInCoda(String valore){
+public void inserimentoInCoda(String valore, Computer pc){
     Nodo nuovoNodo = new Nodo();
     nuovoNodo.setValore(valore);
+    nuovoNodo.setComputer(pc);
     
     if (primoRiferimento == null) {
         primoRiferimento = nuovoNodo;
@@ -165,6 +169,8 @@ public void inserimentoInMezzo(int indice, String valore){
     
     Nodo nuovoNodo = new Nodo();
     nuovoNodo.setValore(valore);
+        nuovoNodo.setComputer(pc);
+
     
     Nodo precedente = raggiungiIndice(indice - 1);
     if (precedente != null) {
@@ -207,6 +213,10 @@ public void inserimentoInMezzo(int indice, String valore){
         } else {
             inserimentoInMezzo(indice, valore);
         }
+    }
+
+    public int compareTo{
+        
     }
 
 }

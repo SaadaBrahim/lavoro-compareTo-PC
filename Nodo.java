@@ -1,5 +1,7 @@
 public class Nodo{
-String valore;
+  private Computer computer;
+  private String valore;
+  private
 Nodo next;
 
 //Getter&Setter
@@ -17,6 +19,14 @@ Nodo next;
 
     public void setNext(Nodo next) {
         this.next = next;
+    }
+
+    public void setComputer(Computer pc){
+        this.computer = pc;
+    }
+
+    public Computer getComputer(){
+        return computer
     }
 
 }
