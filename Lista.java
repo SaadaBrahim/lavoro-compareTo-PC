@@ -184,6 +184,7 @@ public void inserimentoInMezzo(int indice, String valore, Computer pc){
         Nodo temp = lista.getPrimoRiferimento();
         while (temp != null) {
             System.out.print(temp.toString() + " ");
+            System.out.print("");
             temp = temp.getNext();
         }
         System.out.println();
@@ -199,7 +200,7 @@ public void inserimentoInMezzo(int indice, String valore, Computer pc){
         int indice = 0;
         
             while (corrente != null &&
-                valore.compareToIgnoreCase(corrente.getValore()) > 0) {
+                valore.compareTo(corrente.getValore()) > 0) {
                 corrente = corrente.getNext();
                 indice++;
         }

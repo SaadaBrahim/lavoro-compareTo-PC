@@ -11,6 +11,9 @@ public class Main {
         Computer pc3 = new Computer("mac", "M2", 32);
         Computer pc4 = new Computer("dady", "intel i3", 4);
         Computer pc5 = new Computer("zaka", "intel i3", 4);
+        Computer pc6 = new Computer("rota", "intel i3", 4);
+        Computer pc7 = new Computer("fede", "intel i3", 4);
+        Computer pc8 = new Computer("pate", "intel i3", 4);
 
 
         
@@ -18,6 +21,7 @@ public class Main {
         lista.inserimentoInCoda("A", pc1 );
         lista.inserimentoInCoda("B", pc2);
         lista.inserimentoInCoda("C", pc3);
+
         System.out.print("inserimento in coda: ");
         Lista.stampaLista(lista);
         
@@ -29,6 +33,18 @@ public class Main {
         // inserimento in mezzo
         lista.inserimentoInMezzo(2, "X", pc5);
         System.out.print("inserimento in mezzo: ");
+        Lista.stampaLista(lista);
+
+                lista.aggiungiInOrdineAlfabetico("M",pc6);
+        System.out.print("aggiunta in ordine alfabetico M: ");
+        Lista.stampaLista(lista);
+        
+        lista.aggiungiInOrdineAlfabetico("D", pc7);
+        System.out.print("aggiunta in ordine alfabetico D: ");
+        Lista.stampaLista(lista);
+        
+        lista.aggiungiInOrdineAlfabetico("Y", pc8);
+        System.out.print("aggiunta in ordine alfabetico Y: ");
         Lista.stampaLista(lista);
         
     }
